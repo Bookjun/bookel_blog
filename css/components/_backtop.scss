@@ -1,0 +1,38 @@
+.back-to-top {
+    opacity: 0;
+    background-color: $backtop-bg;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 46px;
+    position: fixed;
+    bottom: 60px;
+    right: 140px;
+    z-index: 90;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-transform: translateZ(0);
+    transition: all .6s
+}
+
+.back-to-top a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.back-to-top:hover {
+    background-color: $backtop-bg--hover;
+    color: #fff;
+    opacity: 1;
+}
+
+.back-to-top:hover a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+}
