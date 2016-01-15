@@ -2,6 +2,9 @@
     #common
 \*------------------------------------*/
 /*------------------------------------*\
+    #typography
+\*------------------------------------*/
+/*------------------------------------*\
     #layout:header
 \*------------------------------------*/
 /*------------------------------------*\
@@ -10,6 +13,22 @@
 /*------------------------------------*\
     #themes:book
 \*------------------------------------*/
+blockquote {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  border-left: 4px solid #ddd;
+  font-family: Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, "FontAwesome", serif;
+  /* Small print for identifying the source */
+  /* Smaller margin if `small` follows */ }
+  blockquote small {
+    display: block;
+    color: #999;
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+    text-align: right; }
+  blockquote p:last-of-type {
+    margin-bottom: 0; }
+
 .header {
   background-color: #13747D; }
 
@@ -32,7 +51,8 @@
 
 .back-to-top a {
   color: #fff;
-  font-size: 18px; }
+  font-size: 18px;
+  text-decoration: none; }
 
 .back-to-top:hover {
   background-color: #b37399;

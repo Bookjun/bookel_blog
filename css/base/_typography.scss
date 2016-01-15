@@ -1,0 +1,20 @@
+blockquote {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    border-left: 4px solid $base-blockquote-border;
+    font-family: $font-family-kai;
+    //font-size: @base-blockquote-font-size;
+    //line-height: @base-blockquote-line-height;
+    /* Small print for identifying the source */
+    small {
+        display: block;
+        color: $base-blockquote-small-color;
+        font-family: $font-family-sans-serif;
+        text-align: right;
+    }
+    /* Smaller margin if `small` follows */
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}

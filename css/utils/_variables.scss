@@ -8,7 +8,44 @@ $blue-light: #69D2E7;
 $green-dark: #13747D;
 $green-light: #A7DBD8;
 $purple-mid: #480048;
+$gray-light: #999;
+$global-border: #ddd;
 
+
+/*------------------------------------*\
+    #typography
+\*------------------------------------*/
+// Font family
+// -----------------------------------------------------------------------------
+
+// FreeSans: Ships with many Linux distros, including Ubuntu
+// Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+//        Arial to get picked up by the browser, even though neither is available
+//        in Chrome OS.
+// Droid Sans: Ships with all versions of Android.
+// Roboto: Android new font-family from Android ISC
+// Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+// Helvetica Neue: iOS & OS X 10.10 UI font (not Lucida Grande any more)
+//                 http://morrick.me/archives/6873
+// http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/
+
+// Helvetica
+
+// apple.com: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana,
+
+$font-family-sans-serif: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+
+$font-family-serif: Georgia, "Times New Roman", Times, SimSun, "FontAwesome", serif; //FangSong, STFangSong
+
+$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", "FontAwesome", monospace;
+
+$font-family-kai: Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, "FontAwesome", serif;
+
+// blockquote
+$base-blockquote-border: $global-border;
+$base-blockquote-small-color: $gray-light;
+$base-blockquote-font-size: 1.6rem; // 16px
+$base-blockquote-line-height: 1.5; // 22px
 /*------------------------------------*\
     #layout:header
 \*------------------------------------*/

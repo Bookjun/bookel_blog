@@ -28,11 +28,11 @@ favicon: img/favicon.png
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 highlighter: pygments
-# permalink: pretty
+permalink: pretty
 paginate: 8
 gems: [jekyll-paginate]
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-# relative_permalinks: true
+relative_permalinks: false
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: Asia/Shanghai
