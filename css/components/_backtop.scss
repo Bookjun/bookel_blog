@@ -16,6 +16,13 @@
     transition: all .6s
 }
 
+@media (max-width: 768px) {
+    .back-to-top {
+        right: 15px;
+        bottom: 30px;
+    }
+}
+
 .back-to-top a {
     color: #fff;
     font-size: 18px;

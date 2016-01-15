@@ -86,9 +86,9 @@ Amaze UI 针对不同类型，都进行了申明，现在将它们一个个试�
 
 <pre>
     <div class="font-family-monospace">
-        The quick brown fox jumps over the lazy dog.
-        千万不要因为走得太久，而忘记了我们为什么出发。
-        千萬不要因為走得太久，而忘記了我們為什麼出發。
+    The quick brown fox jumps over the lazy dog.
+    千万不要因为走得太久，而忘记了我们为什么出发。
+    千萬不要因為走得太久，而忘記了我們為什麼出發。
     </div>
 </pre>
 
@@ -108,9 +108,9 @@ Amaze UI 针对不同类型，都进行了申明，现在将它们一个个试�
 
 <pre>
     <div class="smoothing--on">
-        The quick brown fox jumps over the lazy dog.
-        千万不要因为走得太久，而忘记了我们为什么出发。
-        千萬不要因為走得太久，而忘記了我們為什麼出發。
+    The quick brown fox jumps over the lazy dog.
+    千万不要因为走得太久，而忘记了我们为什么出发。
+    千萬不要因為走得太久，而忘記了我們為什麼出發。
     </div>
 </pre>
 
@@ -125,9 +125,9 @@ body {
 
 <pre>
     <div class="smoothing--off">
-        The quick brown fox jumps over the lazy dog.
-        千万不要因为走得太久，而忘记了我们为什么出发。
-        千萬不要因為走得太久，而忘記了我們為什麼出發。
+    The quick brown fox jumps over the lazy dog.
+    千万不要因为走得太久，而忘记了我们为什么出发。
+    千萬不要因為走得太久，而忘記了我們為什麼出發。
     </div>
 </pre>
 
