@@ -1,2 +1,7 @@
 
 config.codekit
+
+_site/
+
+css/.sass-cache/
+
