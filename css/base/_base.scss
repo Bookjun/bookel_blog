@@ -1,0 +1,23 @@
+
+// 外部链接样式
+// -----------------------------------------------------------------------------
+
+// <span class="external-link">
+//  <a href="#">外部链接</a>
+// </span>
+span.external-link a {
+	@extend a.external-link;
+}
+
+// <a class="external-link" href="#">外部链接</a>
+a.external-link {
+	color: $external-link-color;
+
+	&::after {
+		@include fa();
+
+	    content: "\f08e";
+	    margin-left: 3px;
+	    margin-right: 2px;
+	}
+}

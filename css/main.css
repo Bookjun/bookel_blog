@@ -2,6 +2,9 @@
     #common
 \*------------------------------------*/
 /*------------------------------------*\
+    #base
+\*------------------------------------*/
+/*------------------------------------*\
     #typography
 \*------------------------------------*/
 /*------------------------------------*\
@@ -28,6 +31,18 @@ blockquote {
     text-align: right; }
   blockquote p:last-of-type {
     margin-bottom: 0; }
+
+a.external-link, span.external-link a {
+  color: #0e90d2; }
+  a.external-link::after, span.external-link a::after {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f08e";
+    margin-left: 3px;
+    margin-right: 2px; }
 
 .header {
   background-color: #13747D; }

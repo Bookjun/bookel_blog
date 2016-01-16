@@ -4,12 +4,20 @@
 \*------------------------------------*/
 $pink-mid: #2c3e50;
 $blue-dark: #395692;
-$blue-light: #69D2E7;
+$blue-light: #0e90d2;// #69D2E7
 $green-dark: #13747D;
 $green-light: #A7DBD8;
 $purple-mid: #480048;
 $gray-light: #999;
 $global-border: #ddd;
+
+/*------------------------------------*\
+    #base
+\*------------------------------------*/
+
+// external-link 外部链接
+// $external-link-color: #0e90d2;
+$external-link-color: $blue-light;
 
 
 /*------------------------------------*\
@@ -46,6 +54,7 @@ $base-blockquote-border: $global-border;
 $base-blockquote-small-color: $gray-light;
 $base-blockquote-font-size: 1.6rem; // 16px
 $base-blockquote-line-height: 1.5; // 22px
+
 /*------------------------------------*\
     #layout:header
 \*------------------------------------*/
