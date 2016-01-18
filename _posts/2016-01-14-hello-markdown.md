@@ -1,6 +1,7 @@
 ---
 layout: post_book
 title: Markdown入门
+date: 2016-01-14
 subtitle: Markdown，一种轻量级的「标记语言」，它用简洁的语法代替排版，它使我们更专心于码字。
 author: BookEl
 ---

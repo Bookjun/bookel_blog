@@ -49,11 +49,48 @@ $font-family-monospace: Monaco, Menlo, Consolas, "Courier New", "FontAwesome", m
 
 $font-family-kai: Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, "FontAwesome", serif;
 
+$font-size-base:          14px !default;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
 // blockquote
 $base-blockquote-border: $global-border;
 $base-blockquote-small-color: $gray-light;
 $base-blockquote-font-size: 1.6rem; // 16px
 $base-blockquote-line-height: 1.5; // 22px
+
+
+/*------------------------------------*\
+    #components
+\*------------------------------------*/
+$border-radius-base:        4px !default;
+
+$state-default-text:             #282828 !default;
+$state-default-bg:               #f1f1f1 !default;
+$state-default-border:           darken(adjust-hue($state-default-bg, -10), 5%) !default;
+
+$state-primary-text:             #fff !default;
+$state-primary-bg:               #0e90d2 !default;
+$state-primary-border:           darken(adjust-hue($state-primary-bg, -10), 5%) !default;
+
+$state-success-text:             #329d38 !default;
+$state-success-bg:               #ddf4df !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:             #ed980f !default;
+$state-warning-bg:               #fff0d5 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              #e75033 !default;
+$state-danger-bg:                #ffe5e0 !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 /*------------------------------------*\
     #layout:header
@@ -66,6 +103,41 @@ $header-bg: $green-dark;
 \*------------------------------------*/
 $backtop-bg: $pink-mid;
 $backtop-bg--hover: #b37399;
+
+/*------------------------------------*\
+    #components:backtop
+\*------------------------------------*/
+
+$alert-margin-vertical: 1em;
+
+$alert-bg:                    $state-default-bg !default;
+$alert-color:                 $state-default-text !default;
+$alert-border-color:          $state-default-border !default;
+$alert-link-color:            darken($state-default-text, 10%) !default;
+
+$alert-padding:               15px !default;
+$alert-border-radius:         $border-radius-base !default;
+$alert-link-font-weight:      bold !default;
+
+$alert-primary-bg:            $state-primary-bg !default;
+$alert-primary-text:          $state-primary-text !default;
+$alert-primary-border:        $state-primary-border !default;
+
+$alert-success-bg:            $state-success-bg !default;
+$alert-success-text:          $state-success-text !default;
+$alert-success-border:        $state-success-border !default;
+
+$alert-info-bg:               $state-info-bg !default;
+$alert-info-text:             $state-info-text !default;
+$alert-info-border:           $state-info-border !default;
+
+$alert-warning-bg:            $state-warning-bg !default;
+$alert-warning-text:          $state-warning-text !default;
+$alert-warning-border:        $state-warning-border !default;
+
+$alert-danger-bg:             $state-danger-bg !default;
+$alert-danger-text:           $state-danger-text !default;
+$alert-danger-border:         $state-danger-border !default;
 
 /*------------------------------------*\
     #themes:book

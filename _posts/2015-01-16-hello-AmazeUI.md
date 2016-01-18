@@ -1,6 +1,7 @@
 ---
 layout: post_book
 title: Amaze UI浅析（概述）
+date: 2016-01-16
 subtitle: 国内首个开源 HTML5 跨屏前端框架
 author: BookEl
 ---

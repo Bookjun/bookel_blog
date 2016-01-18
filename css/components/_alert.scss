@@ -1,0 +1,131 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+    margin-bottom: $alert-margin-vertical;
+    padding: $alert-padding;
+    background: $alert-bg;
+    color: $alert-color;
+    border: 1px solid darken($alert-border-color, 6%);
+    border-radius: $alert-border-radius;
+
+    .alert-link {
+        color: $alert-link-color;
+        font-weight: $alert-link-font-weight;
+    }
+
+    // Keep color for headings if the default heading color is changed
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: inherit;
+    }
+
+    > :last-child {
+    	margin-bottom: 0;
+    }
+
+    // Improve alignment and spacing of inner content
+    p,
+    ul {
+        margin: 0;
+    }
+
+    p + p {
+        margin-top: 5px;
+    }
+
+    > .fa {
+        float: left;
+        margin-top: -5px;
+        font-size: 42px;
+        opacity: .6;
+        -webkit-transition: opacity .3s cubic-bezier(.175, .885, .32, 1);
+             -o-transition: opacity .3s cubic-bezier(.175, .885, .32, 1);
+                transition: opacity .3s cubic-bezier(.175, .885, .32, 1);
+    }
+
+    > .fa + .content  {
+        min-height: 30px;
+        margin-left: 64px;
+    }
+}
+
+// Dismissible alerts
+// -------------------------
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable, // The misspelled
+.alert-dismissible {
+    padding-right: ($alert-padding + 20);
+
+    // Adjust close link position
+    .close {
+        position: relative;
+        top: -2px;
+        right: -21px;
+        color: inherit;
+    }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+// 参考 Bootstrap，为 Alert 设置了6种状态，default、primary、success、info、warning、danger。
+
+.alert--primary {
+    @include alert-variant($alert-primary-bg, $alert-primary-border, $alert-primary-text);
+}
+
+.alert--success {
+    @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+}
+
+.alert--info {
+    @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+}
+
+.alert--warning {
+    @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+}
+
+.alert--danger {
+    @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+}
+
+// Alter with icon
+// -------------------------
+
+.alert.with-icon {
+    display: table;
+    width: 100%;
+
+    > .fa {
+        width: 48px;
+        text-align: center;
+    }
+
+    > .fa + .content {
+        padding-left: 1em;
+    }
+
+    > .fa,
+    > .fa + .content {
+        display: table-cell;
+        float: none;
+        min-height: 0;
+        margin: 0;
+        vertical-align: middle;
+    }
+}
+
+
