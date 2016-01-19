@@ -57,6 +57,27 @@
         min-height: 30px;
         margin-left: 64px;
     }
+
+    .close {
+        opacity: .4;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    button.close {
+        padding: 0;
+        cursor: pointer;
+        background: 0 0;
+        border: 0;
+        -webkit-appearance: none;
+
+        &:hover,
+        &:focus {
+            outline: 0;
+        }
+    }
 }
 
 // Dismissible alerts
@@ -74,6 +95,16 @@
         top: -2px;
         right: -21px;
         color: inherit;
+
+        &:first-child {
+            float: right;
+            height: auto;
+            margin: -3px -5px auto auto;
+        }
+
+        &:first-child + * {
+            margin-top: 0;
+        }
     }
 }
 
@@ -129,3 +160,12 @@
 }
 
 
+.fade {
+    opacity: 0;
+
+    @include transition(opacity .15s linear);
+
+    &.in {
+        opacity: 1;
+    }
+}

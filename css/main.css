@@ -127,6 +127,18 @@ a.external-link, span.external-link a {
   .alert > .fa + .content {
     min-height: 30px;
     margin-left: 64px; }
+  .alert .close {
+    opacity: .4; }
+    .alert .close:hover {
+      opacity: .6; }
+  .alert button.close {
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    -webkit-appearance: none; }
+    .alert button.close:hover, .alert button.close:focus {
+      outline: 0; }
 
 .alert-dismissable,
 .alert-dismissible {
@@ -137,6 +149,14 @@ a.external-link, span.external-link a {
     top: -2px;
     right: -21px;
     color: inherit; }
+    .alert-dismissable .close:first-child,
+    .alert-dismissible .close:first-child {
+      float: right;
+      height: auto;
+      margin: -3px -5px auto auto; }
+    .alert-dismissable .close:first-child + *,
+    .alert-dismissible .close:first-child + * {
+      margin-top: 0; }
 
 .alert--primary {
   background-color: #0e90d2;
@@ -198,6 +218,14 @@ a.external-link, span.external-link a {
     min-height: 0;
     margin: 0;
     vertical-align: middle; }
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear; }
+  .fade.in {
+    opacity: 1; }
 
 .bg__header--book {
   background-color: #480048; }
