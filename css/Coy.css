@@ -45,7 +45,7 @@ pre[class*="language-"] {
 	background-origin: content-box;
 	/*overflow: visible;*/
 	overflow: auto;
-	max-height: 30em;
+	/*max-height: 30em;*/
 	padding: 0;
 }
 

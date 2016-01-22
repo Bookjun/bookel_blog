@@ -1,7 +1,6 @@
 @import 'utils/variables';
 @import 'utils/mixins';
 
-// @import 'vendors/bootstrap';
 @import 'vendors/prefixes';
 
 @import 'base/typography';
@@ -14,6 +13,7 @@
 
 @import 'components/backtop';
 @import 'components/alert';
+@import 'components/close';
 
 @import 'themes/book';
 

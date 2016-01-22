@@ -1,7 +1,7 @@
 
-/*------------------------------------*\
-    #common
-\*------------------------------------*/
+// common
+// -----------------------------------------------------------------------------
+
 $pink-mid: #2c3e50;
 $blue-dark: #395692;
 $blue-light: #0e90d2;// #69D2E7
@@ -11,18 +11,17 @@ $purple-mid: #480048;
 $gray-light: #999;
 $global-border: #ddd;
 
-/*------------------------------------*\
-    #base
-\*------------------------------------*/
+// base
+// -----------------------------------------------------------------------------
 
 // external-link 外部链接
 // $external-link-color: #0e90d2;
 $external-link-color: $blue-light;
 
 
-/*------------------------------------*\
-    #typography
-\*------------------------------------*/
+// typography
+// -----------------------------------------------------------------------------
+
 // Font family
 // -----------------------------------------------------------------------------
 
@@ -63,10 +62,11 @@ $base-blockquote-font-size: 1.6rem; // 16px
 $base-blockquote-line-height: 1.5; // 22px
 
 
-/*------------------------------------*\
-    #components
-\*------------------------------------*/
+// components
+// -----------------------------------------------------------------------------
+
 $border-radius-base:        4px !default;
+$border-radius-large:       0px !default;
 
 $state-default-text:             #282828 !default;
 $state-default-bg:               #f1f1f1 !default;
@@ -92,21 +92,30 @@ $state-danger-text:              #e75033 !default;
 $state-danger-bg:                #ffe5e0 !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
-/*------------------------------------*\
-    #layout:header
-\*------------------------------------*/
+//-- Z-index master list
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+
+//== Media queries breakpoints
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+
+// layout:header
+// -----------------------------------------------------------------------------
+
 // $header-bg: $purple-mid;
 $header-bg: $green-dark;
 
-/*------------------------------------*\
-    #components:backtop
-\*------------------------------------*/
+// components:backtop
+// -----------------------------------------------------------------------------
+
 $backtop-bg: $pink-mid;
 $backtop-bg--hover: #b37399;
 
-/*------------------------------------*\
-    #components:backtop
-\*------------------------------------*/
+// components:alert
+// -----------------------------------------------------------------------------
 
 $alert-margin-vertical: 1em;
 
@@ -139,8 +148,52 @@ $alert-danger-bg:             $state-danger-bg !default;
 $alert-danger-text:           $state-danger-text !default;
 $alert-danger-border:         $state-danger-border !default;
 
-/*------------------------------------*\
-    #themes:book
-\*------------------------------------*/
+// components:close
+// -----------------------------------------------------------------------------
+//== Close
+//
+//##
+
+$close-font-weight:           bold;
+$close-color:                 #000;
+$close-text-shadow:           0 1px 0 #fff;
+
+// components:modal
+// -----------------------------------------------------------------------------
+
+//** Padding applied to the modal body
+$modal-inner-padding:         15px !default;
+
+//** Padding applied to the modal title
+$modal-title-padding:         15px !default;
+//** Modal title line-height
+$modal-title-line-height:     $line-height-base !default;
+
+//** Background color of modal content area
+$modal-content-bg:                             #fff !default;
+//** Modal content border color
+$modal-content-border-color:                   rgba(0,0,0,.2) !default;
+//** Modal content border color **for IE8**
+$modal-content-fallback-border-color:          #999 !default;
+
+//** 遮罩
+//** Modal backdrop background color
+$modal-backdrop-bg:           #000 !default;
+//** Modal backdrop opacity
+$modal-backdrop-opacity:      .5 !default;
+
+//** Modal header border color
+$modal-header-border-color:   #dedede !default; // #e5e5e5
+//** Modal footer border color
+$modal-footer-border-color:   $modal-header-border-color !default;
+
+$modal-lg:                    810px !default;
+$modal-md:                    540px !default;
+$modal-sm:                    270px !default;
+
+
+// themes:book
+// -----------------------------------------------------------------------------
+
 $bg__header--book: $purple-mid;
 
