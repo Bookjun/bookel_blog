@@ -235,3 +235,8 @@ pre[data-line] code {
 pre .line-highlight {
 	margin-top: 0;
 }
+
+/* === 注释换行 ===*/
+.highlight pre code * {
+    white-space: inherit;
+}

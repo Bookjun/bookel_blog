@@ -18,3 +18,16 @@ blockquote {
         margin-bottom: 0;
     }
 }
+
+// 列表下p元素的margin
+li p {
+    margin: 0 0 .75em;
+}
+
+// === 内容选中 ===
+::-moz-selection,
+::selection {
+  color: white;
+  text-shadow: none;
+  background: #00c9d7;
+}

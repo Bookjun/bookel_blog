@@ -1,0 +1,246 @@
+//
+// Modals
+// --------------------------------------------------
+
+/**
+ * |
+ * |- .modal 用来把 <div> 的内容识别为模态框
+ * |   |
+ * |   |- .modal-dialog
+ * |       |
+ * |       |- .modal-content
+ * |           |
+ * |           |- .modal-header       模态窗口的头部样式
+ * |              |
+ * |              |- .modal-title
+ * |              |
+ * |           |
+ * |           |- .modal-body         模态窗口的主体样式
+ * |           |
+ * |           |- .modal-footer       模态窗口的底部样式，多用于按钮
+ * |           |
+ * |
+ *
+ * additional:
+ * .modal 配合 .fade 实现当模态框被切换时，它会引起内容淡入淡出。
+ * .modal-header 包含 .close 为模态窗口的关闭按钮设置样式。
+ *
+ * 遮罩：
+ * .modal-open 通过js，在body添加该类，关闭滚动
+ * .modal-backdrop 通过js，在页面内添加标签，实现遮罩
+ */
+
+// Base styles
+// -------------------------
+// Kill the scroll on the body
+.modal-open {
+    overflow: hidden;
+
+    .modal {
+    	overflow-x: hidden;
+    	overflow-y: auto;
+    }
+}
+
+// Container that the modal scrolls within
+.modal {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $zindex-modal;
+    -webkit-overflow-scrolling: touch;
+
+    // Prevent Chrome on Windows from adding a focus outline.
+    outline: 0;
+
+    // When fading in the modal, animate it to slide down
+    &.fade .modal-dialog {
+        @include translate(0, -25%);
+        @include transition-transform(0.3s ease-out);
+    }
+
+    &.in .modal-dialog {
+	    @include translate(0, 0);
+    }
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+// Actual modal
+.modal-content {
+    position: relative;
+    background-color: $modal-content-bg;
+    border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+    border: 1px solid $modal-content-border-color;
+    border-radius: $border-radius-large;
+    @include box-shadow(0 3px 9px rgba(0, 0, 0, .5));
+    background-clip: padding-box;
+    // Remove focus outline from opened modal
+    outline: 0;
+}
+
+// Modal background
+.modal-backdrop {
+    position: fixed;
+	top:     0;
+	right:   0;
+	bottom:  0;
+	left:    0;
+    z-index: $zindex-modal-background;
+    background-color: $modal-backdrop-bg;
+    // Fade for backdrop
+    &.fade {
+        @include opacity(0);
+    }
+
+    &.in {
+        @include opacity($modal-backdrop-opacity);
+    }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+    padding: $modal-title-padding;
+    border-bottom: 1px solid $modal-header-border-color;
+    min-height: ($modal-title-padding + $modal-title-line-height);
+
+	// Close icon
+    .close {
+	    margin-top: -2px;
+    }
+}
+
+// Title text within header
+.modal-title {
+    text-align: center;
+    margin: 0;
+    line-height: $modal-title-line-height;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+    text-align: center;
+    position: relative;
+    padding: $modal-inner-padding;
+}
+
+// Footer (for actions)
+.modal-footer {
+    border-top: 1px solid $modal-footer-border-color;
+
+    overflow: hidden;
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    height: 44px;
+    padding: 0;
+
+    @include clearfix; // clear it in case folks use .pull-* classes on buttons
+
+    .btn {
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+
+    // Properly space out buttons
+    .btn + .btn {
+        margin-left: 5px;
+        margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+    }
+
+    // but override that for button groups
+    .btn-group .btn + .btn {
+        margin-left: -1px;
+    }
+
+    // and override it for block buttons as well
+    .btn-block + .btn-block {
+        margin-left: 0;
+    }
+
+    .modal-fotter__btn {
+        display: table-cell !important;
+        padding: 0 5px;
+        height: 44px;
+        box-sizing: border-box !important;
+        font-size: 1.6rem;
+        line-height: 44px;
+        text-align: center;
+        cursor: pointer;
+        color: $blue-light;
+        border-right: 1px solid $modal-footer-border-color;
+        @include text-overflow(block);
+
+        &:hover {
+            background-color: $state-default-bg;
+        }
+
+        &:first-child {
+          border-radius: 0 0 0 $modal-footer-border-radius;
+        }
+
+        &:last-child {
+          border-right: none;
+          border-radius: 0 0 $modal-footer-border-radius 0;
+        }
+
+        &:first-child:last-child {
+          border-radius: 0 0 $modal-footer-border-radius $modal-footer-border-radius;
+        }
+
+        &:active {
+          background: darken($state-default-bg, 10%);
+        }
+
+        & + .modal-fotter__btn {
+          border-left: 1px solid $modal-footer-border-color;
+        }
+    }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+}
+
+// Scale up the modal
+@media (min-width: $screen-sm-min) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+        width: $modal-md;
+        margin: 30px auto;
+    }
+
+    .modal-content {
+    	@include box-shadow(0 5px 15px rgba(0, 0, 0, .5));
+    }
+
+    // Modal sizes
+    .modal-sm {
+        width: $modal-sm;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .modal-lg {
+        width: $modal-lg;
+    }
+}
+
+
+
