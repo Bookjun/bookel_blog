@@ -1,0 +1,9 @@
+.sticky {
+    position: fixed;
+    z-index: $zindex-stick;
+    transform-origin: 0 0; // Needed for scale animation
+}
+
+[data-sticky][class*="animation-"] {
+    animation-duration: .2s;
+}

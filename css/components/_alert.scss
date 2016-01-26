@@ -1,7 +1,8 @@
 //
 // Alerts
 // --------------------------------------------------
-
+// v1.0.1
+// 修改.alter--primary small的文字颜色
 
 // Base styles
 // -------------------------
@@ -115,6 +116,9 @@
 
 .alert--primary {
     @include alert-variant($alert-primary-bg, $alert-primary-border, $alert-primary-text);
+    small {
+        color: #fff;
+    }
 }
 
 .alert--success {

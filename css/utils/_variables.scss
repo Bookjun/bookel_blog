@@ -96,6 +96,9 @@ $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !
 $zindex-modal-background:  1040 !default;
 $zindex-modal:             1050 !default;
 
+//-- Z-index sticky list
+$zindex-stick:             1010 !default;
+
 //== Media queries breakpoints
 $screen-sm:                  768px !default;
 $screen-sm-min:              $screen-sm !default;

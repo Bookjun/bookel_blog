@@ -175,6 +175,8 @@ button.close {
     border-top-color: #0b88a2; }
   .alert--primary .alert-link {
     color: #e6e6e6; }
+  .alert--primary small {
+    color: #fff; }
 
 .alert--success {
   background-color: #ddf4df;
@@ -417,5 +419,13 @@ button.close {
 @media (min-width: 992px) {
   .modal-lg {
     width: 810px; } }
+.sticky {
+  position: fixed;
+  z-index: 1010;
+  transform-origin: 0 0; }
+
+[data-sticky][class*="animation-"] {
+  animation-duration: .2s; }
+
 .bg__header--book {
   background-color: #480048; }
