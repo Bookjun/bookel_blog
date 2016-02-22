@@ -18,11 +18,18 @@ blockquote {
 li p {
   margin: 0 0 .75em; }
 
-::-moz-selection,
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #00c9d7; }
+
 ::selection {
   color: white;
   text-shadow: none;
   background: #00c9d7; }
+
+.Tags .tag {
+  color: #fff; }
 
 a.external-link, span.external-link a {
   color: #0e90d2; }
@@ -54,6 +61,7 @@ a.external-link, span.external-link a {
   cursor: pointer;
   border-radius: 3px;
   -webkit-transform: translateZ(0);
+  -webkit-transition: all 0.6s;
   transition: all 0.6s; }
 
 @media (max-width: 768px) {
@@ -131,7 +139,6 @@ button.close {
     font-size: 42px;
     opacity: .6;
     -webkit-transition: opacity 0.3s cubic-bezier(0.175, 0.885, 0.32, 1);
-    -o-transition: opacity 0.3s cubic-bezier(0.175, 0.885, 0.32, 1);
     transition: opacity 0.3s cubic-bezier(0.175, 0.885, 0.32, 1); }
   .alert > .fa + .content {
     min-height: 30px;
@@ -233,7 +240,6 @@ button.close {
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear; }
   .fade.in {
     opacity: 1; }
@@ -285,16 +291,14 @@ button.close {
   .modal.fade .modal-dialog {
     -webkit-transform: translate(0, -25%);
     -ms-transform: translate(0, -25%);
-    -o-transform: translate(0, -25%);
     transform: translate(0, -25%);
     -webkit-transition: -webkit-transform 0.3s ease-out;
-    -moz-transition: -moz-transform 0.3s ease-out;
-    -o-transition: -o-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out; }
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
   .modal.in .modal-dialog {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
     transform: translate(0, 0); }
 
 .modal-dialog {
@@ -308,7 +312,6 @@ button.close {
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0px;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0; }
@@ -411,7 +414,6 @@ button.close {
     margin: 30px auto; }
 
   .modal-content {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
 
   .modal-sm {
@@ -422,10 +424,13 @@ button.close {
 .sticky {
   position: fixed;
   z-index: 1010;
-  transform-origin: 0 0; }
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0; }
 
 [data-sticky][class*="animation-"] {
-  animation-duration: .2s; }
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s; }
 
 .bg__header--book {
   background-color: #480048; }

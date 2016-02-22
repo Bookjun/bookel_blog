@@ -25,9 +25,13 @@ li p {
 }
 
 // === 内容选中 ===
-::-moz-selection,
 ::selection {
   color: white;
   text-shadow: none;
   background: #00c9d7;
+}
+
+// === 标签 ===
+.Tags .tag {
+    color: #fff;
 }
