@@ -3,8 +3,15 @@ layout: default
 ---
 
 <!-- Post Header -->
+<!-- 有背景图 -->
+{% if page.bg %}
+<header class="intro-header headbg fullbg" style="background-image: url({{ page.bg}});">
+    <div class="container-fluid bg__header__img--book">
+{% else %}
+<!-- 无背景图 -->
 <header class="intro-header bg__header--book">
     <div class="container-fluid">
+{% endif %}
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">

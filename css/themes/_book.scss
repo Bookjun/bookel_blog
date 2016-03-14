@@ -1,3 +1,9 @@
+// === 无背景图 ===
 .bg__header--book{
 	background-color: $bg__header--book;
+}
+
+// === 有背景图 ===
+.bg__header__img--book {
+	background-color: rgba($bg__header--book, .7);
 }

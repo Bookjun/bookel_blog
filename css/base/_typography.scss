@@ -35,3 +35,26 @@ li p {
 .Tags .tag {
     color: #fff;
 }
+
+// === 图片含文字内容 ===
+.thumbnail .content {
+    padding: 9px;
+    color: #333;
+
+    p {
+        margin: 0 0 10px;
+    }
+}
+
+// === 图片铺满整个页面 ===
+.fullbg {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.headbg {
+    height: 565px;
+}
