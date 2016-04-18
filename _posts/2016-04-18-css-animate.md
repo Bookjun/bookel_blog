@@ -9,9 +9,24 @@ bg: http://img5q.duitang.com/uploads/item/201503/21/20150321174932_HZkSd.jpeg
 ---
 
 <style>
+    @-webkit-keyframes panoramic {
+        to {
+            background-position: 0 100%
+        }
+    }
+    @-o-keyframes panoramic {
+        to {
+            background-position: 0 100%
+        }
+    }
+    @-moz-keyframes panoramic {
+        to {
+            background-position: 0 100%
+        }
+    }
     @keyframes panoramic {
         to {
-            background-position: 0 100%;
+            background-position: 0 100%
         }
     }
 
@@ -23,6 +38,10 @@ bg: http://img5q.duitang.com/uploads/item/201503/21/20150321174932_HZkSd.jpeg
     }
 
     .panoramic.autoPlay {
+        -webkit-animation: panoramic 10s linear infinite alternate;
+        -moz-animation: panoramic 10s linear infinite alternate;
+        -ms-animation: panoramic 10s linear infinite alternate;
+        -o-animation: panoramic 10s linear infinite alternate;
         animation: panoramic 10s linear infinite alternate;
     }
 
@@ -33,16 +52,28 @@ bg: http://img5q.duitang.com/uploads/item/201503/21/20150321174932_HZkSd.jpeg
 
     .panoramic.palceOn:hover,
     .panoramic.palceOn:focus {
+        -webkit-animation: panoramic 10s linear infinite alternate;
+        -moz-animation: panoramic 10s linear infinite alternate;
+        -ms-animation: panoramic 10s linear infinite alternate;
+        -o-animation: panoramic 10s linear infinite alternate;
         animation: panoramic 10s linear infinite alternate;
     }
 
     .panoramic.palcePlay {
+        -webkit-animation: panoramic 10s linear infinite alternate;
+        -moz-animation: panoramic 10s linear infinite alternate;
+        -ms-animation: panoramic 10s linear infinite alternate;
+        -o-animation: panoramic 10s linear infinite alternate;
         animation: panoramic 10s linear infinite alternate;
+        -webkit-animation-play-state: paused;
+        -o-animation-play-state: paused;
         animation-play-state: paused;
     }
 
     .panoramic.palcePlay:hover,
     .panoramic.palcePlay:focus {
+        -webkit-animation-play-state: running;
+        -o-animation-play-state: running;
         animation-play-state: running;
     }
 </style>
@@ -94,6 +125,11 @@ bg: http://img5q.duitang.com/uploads/item/201503/21/20150321174932_HZkSd.jpeg
     </div>
     <div class="col-xs-12 col-sm-6">
     {% highlight css %}
+@keyframes panoramic {
+    to {
+        background-position: 0 100%;
+    }
+}
 .panoramic {
     animation: panoramic 10s linear infinite alternate;
 }
